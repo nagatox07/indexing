@@ -1,0 +1,30 @@
+# Environment variables (CRITICAL: Never commit secrets)
+.env
+.env.local
+.env.*.local
+
+# Node dependencies and build
+node_modules/
+dist/
+build/
+.npm/
+
+# Ponder internal cache & generated files
+.ponder/
+ponder-env.d.ts
+
+# Foundry build artifacts and broadcasted transactions
+contracts/out/
+contracts/cache/
+contracts/broadcast/
+out/
+cache/
+broadcast/
+
+# Local PostgreSQL cluster data directory (if using project-local cluster)
+postgres_data/
+*.log
+
+# Operating system files
+.DS_Store
+Thumbs.db
