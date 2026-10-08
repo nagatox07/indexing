@@ -8,10 +8,10 @@
     "dev": "ponder dev",
     "start": "ponder start",
     "build": "npm run compile:contracts && ponder codegen",
-    "compile:contracts": "cd contracts && forge build && cd .. && npm run sync:abis",
+    "compile:contracts": "export PATH=\"$PATH:$HOME/.foundry/bin\" && cd contracts && forge build && cd .. && npm run sync:abis",
     "sync:abis": "node scripts/sync-abis.js",
     "typecheck": "tsc --noEmit",
-    "test:contracts": "cd contracts && forge test -vvv"
+    "test:contracts": "export PATH=\"$PATH:$HOME/.foundry/bin\" && cd contracts && forge test -vvv"
   },
   "dependencies": {
     "hono": "^4.7.4",
