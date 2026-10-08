@@ -73,7 +73,7 @@ contract DataRegistryTest is Test {
         uint256 id = registry.createRecord("Initial Title", "Initial Content");
 
         // Warp time by 1 hour to test updated timestamp
-        uint256 nextTime = block.timestamp + 3600;
+        uint256 nextTime = vm.getBlockTimestamp() + 3600;
         vm.warp(nextTime);
 
         vm.prank(alice);

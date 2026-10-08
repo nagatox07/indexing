@@ -6,7 +6,7 @@ pragma solidity ^0.8.20;
  * @author ChainIndex Team
  * @notice A minimal, standard-compliant ERC-20 token built exclusively to demonstrate Transfer event indexing.
  * @dev Intentionally simple: no tokenomics, no staking, no liquidity pools, no fee mechanisms.
- *      Exposes standard transfer and a public mint function to generate test Transfer events on Base Sepolia.
+ *      Exposes standard transfer and a public mint function to generate test Transfer events on Ethereum Sepolia.
  */
 contract DemoToken {
     // =========================================================================
@@ -144,7 +144,7 @@ contract DemoToken {
 
     /**
      * @notice Public testnet mint function allowing anyone to mint demo tokens.
-     * @dev Exists exclusively to enable easy testing of Transfer event indexing on Base Sepolia.
+     * @dev Exists exclusively to enable easy testing of Transfer event indexing on Ethereum Sepolia.
      * @param to Recipient address for the newly minted tokens.
      * @param amount Number of tokens in base units (e.g. 100 * 10^18).
      */

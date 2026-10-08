@@ -7,7 +7,7 @@ import {DemoToken} from "../src/DemoToken.sol";
 
 /**
  * @title DeployScript
- * @notice Automated deployment script for Base Sepolia testnet.
+ * @notice Automated deployment script for Ethereum Sepolia testnet.
  * @dev Reads the DEPLOYER_PRIVATE_KEY environment variable and deploys both contracts.
  */
 contract DeployScript is Script {

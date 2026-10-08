@@ -2,7 +2,7 @@
   "name": "chainindex",
   "version": "0.1.0",
   "private": true,
-  "description": "Developer-facing blockchain indexing and API SaaS targeting Base Sepolia",
+  "description": "Developer-facing blockchain indexing and API SaaS targeting Ethereum Sepolia",
   "type": "module",
   "scripts": {
     "dev": "ponder dev",
