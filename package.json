@@ -5,15 +5,20 @@
   "description": "Developer-facing blockchain indexing and API SaaS targeting Ethereum Sepolia",
   "type": "module",
   "scripts": {
-    "dev": "ponder dev",
-    "start": "ponder start",
-    "build": "npm run compile:contracts && ponder codegen",
+    "dev": "node scripts/ponder.js dev",
+    "dev:dashboard": "vite dashboard",
+    "start": "node scripts/ponder.js start",
+    "build": "npm run compile:contracts && node scripts/ponder.js codegen && npm run build:dashboard",
+    "build:indexer": "npm run compile:contracts && node scripts/ponder.js codegen",
+    "build:dashboard": "vite build dashboard",
     "compile:contracts": "export PATH=\"$PATH:$HOME/.foundry/bin\" && cd contracts && forge build && cd .. && npm run sync:abis",
     "sync:abis": "node scripts/sync-abis.js",
-    "typecheck": "tsc --noEmit",
+    "smoke": "node scripts/smoke-test.js",
+    "typecheck": "tsc --noEmit && tsc -p dashboard/tsconfig.json --noEmit",
     "test:contracts": "export PATH=\"$PATH:$HOME/.foundry/bin\" && cd contracts && forge test -vvv"
   },
   "dependencies": {
+    "dotenv": "^18.0.6",
     "hono": "^4.7.4",
     "pg": "^8.13.3",
     "ponder": "^0.18.0",
@@ -22,6 +27,12 @@
   "devDependencies": {
     "@types/node": "^22.13.10",
     "@types/pg": "^8.11.11",
-    "typescript": "^5.8.2"
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@vitejs/plugin-react": "^6.1.2",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0",
+    "typescript": "^5.8.2",
+    "vite": "^8.3.4"
   }
 }

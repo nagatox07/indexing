@@ -11,6 +11,7 @@ build/
 
 # Ponder internal cache & generated files
 .ponder/
+generated/
 ponder-env.d.ts
 
 # Foundry build artifacts and broadcasted transactions
